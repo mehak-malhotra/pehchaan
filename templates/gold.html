@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gold Investment</title>
+    <link rel="stylesheet" href="static/gold.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gold Loan</a></li>
+                <li><a href="#">BNPL</a></li>
+                <li><a href="#">Shakti Loan</a></li>
+                <li><a href="#">Login</a></li>
+                <li><button class="loan-btn">Apply for Loan</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="left">
+            <h3><em>Start Investing with</em></h3>
+            <h1>India's leader in Digital Gold</h1>
+            <p>Buy, sell or redeem anytime. Easy, convenient & affordable way to build your gold holding.
+                The Reserve Bank of India (RBI) has issued a number of regulations governing digital gold investments. These regulations are designed to protect consumers and ensure the safety and security of digital gold investments.
+            </p>
+        </div>
+        <div class="right">
+            <div class="gold-card">
+                <h2>Interest Rate</h2>
+                <!-- <h3 id="Interest rate">Interest Rate</h3> -->
+
+
+                <div class="input-container">
+                    <!-- <input type="number" id="percentage-input" value="6.83%"> -->
+                    <span id="converted-grams">6.83</span>
+                    <span>%</span>
+                </div>
+                <button class="proceed-btn">PROCEED</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Options -->
+    <section class="options">
+        <h1>Manage Your Digital Gold Investment</h1>
+        
+        <div class="option-container">
+            <!-- Deposit Money -->
+            <div class="option-card">
+                <img src="deposit.png" alt="Deposit Money">
+                <h2>Deposit Money</h2>
+                <input type="text" id="deposit-user-id" placeholder="Enter Login User ID">
+                <input type="number" id="deposit-amount" placeholder="Enter Amount">
+                <button onclick="depositMoney()">Deposit Now</button>
+            </div>
+
+            <!-- Check Balance -->
+            <div class="option-card">
+                <img src="balance.png" alt="Check Balance">
+                <h2>Check Balance</h2>
+                <input type="text" id="balance-user-id" placeholder="Enter Login User ID">
+                <button onclick="checkBalance()">Check Now</button>
+                <p id="balance-result"></p>
+            </div>
+
+            <!-- Withdraw Investment -->
+            <div class="option-card">
+                <img src="withdraw.png" alt="Withdraw Investment">
+                <h2>Withdraw Investment</h2>
+                <input type="text" id="withdraw-user-id" placeholder="Enter Login User ID">
+                <input type="number" id="withdraw-amount" placeholder="Enter Amount">
+                <button onclick="withdrawMoney()">Withdraw Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

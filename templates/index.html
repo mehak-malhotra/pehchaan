@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Financial Empowerment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <ul>
+                {% if session.get("logged_in") %}
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('gold') }}">Gold Loan</a></li>
+                    <li><a href="#">BNPL</a></li>
+                    <li><a href="#">Shakti Loan</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    <li><button class="loan-btn">Apply for Loan</button></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Women's Financial Empowerment</h1>
+            <p>Welcome to <b>Pehchaan</b>, where we provide accessible and secure financial solutions tailored for women. From gold loans and BNPL options to Shakti Loans and gold investments, we empower you to achieve financial independence with ease. Start your journey towards a secure future today!</p>
+        </div>
+        <div class="hero-image">
+            <img src="static/lady entreprenuer.jpg" alt="Businesswoman">
+        </div>
+    </section>
+
+    {% if session.get("logged_in") %}
+    <section class="Gold_Loan">
+        <div class="text-content">
+            <h4>Gold Loan</h4>
+            <h1>"Looking to raise debt-free funding for your business? Apply for a Gold Loan today!"</h1>
+            <p>"Unlock the power of your gold! A gold loan is the best way to access quick funds while retaining ownership. Secure your loan today!"</p>
+            <button class="Apply For Gold Loan">Apply For Gold Loan</button>
+        </div>
+        <div class="image-content">
+            <img src="static/loan pic.jpg" alt="Gold Loan">
+        </div>
+    </section>
+
+    <section class="Gold_Loan">
+        <div class="text-content">
+            <div class="grant-image">
+                <img src="static/loan pic.jpg" alt="Happy woman using laptop">
+            </div>
+            <div class="grant-content">
+                <h4>Gold Loan</h4>
+                <p>We have a wide variety of grants available to our members, from our monthly Pay-It-Forward grant to those from our enterprise partners.</p>
+                <button class="grant-btn">Apply for grants</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="Gold_Loan">
+        <div class="text-content">
+            <h4>Gold Loan</h4>
+            <h1>"Looking to raise debt-free funding for your business? Apply for a Gold Loan today!"</h1>
+            <p>"Unlock the power of your gold! A gold loan is the best way to access quick funds while retaining ownership. Secure your loan today!"</p>
+            <button class="Apply For Gold Loan">Apply For Gold Loan</button>
+        </div>
+        <div class="image-content">
+            <img src="static/loan pic.jpg" alt="Gold Loan">
+        </div>
+    </section>
+    {% else %}
+        <p> </p>
+    {% endif %}
+
+
+</body>
+</html>
